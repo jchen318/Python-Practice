@@ -1,8 +1,16 @@
-Q1: How many positions are found in the region 1:1105411-44137860 in the VCF file?
-#extract specified region and create new file to store variants of the region 
+# Genomic Variant Training – Answers
+
+---
+
+### Q1: How many positions are found in the region 1:1105411–44137860 in the VCF file?
+
+```bash
+# Extract the specified region and create a new file
 tabix CEU.exon.2010_03.genotypes.vcf.gz 1:1105411-44137860 > region.vcf
-#count number of variant positions 
-grep -v '^#' region_with_header.vcf | wc -l
+
+# Count the number of variant positions (exclude header lines)
+grep -v '^#' region.vcf | wc -l
+
 A: 69 
 
 Q2: How many samples are included in the VCF file?
