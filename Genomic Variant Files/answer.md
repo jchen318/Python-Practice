@@ -63,3 +63,19 @@ TSTV	0	2708	781	3.47	2708	781	3.47
 ```
 A: 3.47 
 
+---
+
+### Rename Chromosomes in VCF 
+
+```bash
+#create chr_map.txt then paste provided map file 
+nano chr_map.txt
+#use bcftools annotate and ---rename-chrs flag
+bcftools annotate --rename-chrs chr_map.txt \
+  -O z \   #compress file 
+  -o CEU.exon.2010_03.genotypes.chr_conv.vcf.gz \
+  CEU.exon.2010_03.genotypes.vcf.gz
+
+
+
+
