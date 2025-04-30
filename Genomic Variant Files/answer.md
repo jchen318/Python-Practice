@@ -76,6 +76,27 @@ bcftools annotate --rename-chrs chr_map.txt \
   -o CEU.exon.2010_03.genotypes.chr_conv.vcf.gz \
   CEU.exon.2010_03.genotypes.vcf.gz
 
+```
+---
+
+### Q6: What is the median number of variants per sample in this data set?
+
+```bash
+#in R studio 
+# view available TCGA cohorts, check that LGG is there
+tcgaAvailable()
+# load the available LGG cohort
+lgg <- tcgaLoad(study = "LGG")
+# view a summary of this file
+lgg
+A: 28
+
+
+
+
+
+
+
 
 
 
